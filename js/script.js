@@ -21,7 +21,7 @@ search.addEventListener('click', (e) => {
 	getData(query);
 })
 async function getData(query) {
-	let res = await fetch(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${auth}&limit=30`,
+	let res = await fetch(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${auth}&limit=30`,
 		// {
 		// 	method: "GET",
 		// 	headers: {
