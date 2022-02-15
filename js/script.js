@@ -5,11 +5,16 @@ const search = document.querySelector('#header__search');
 const gallery = document.querySelector('.gallery__grid');
 let query = '';
 
-// input.addEventListener('input', (e) => {
-// 	e.preventDefault();
-// })
-
-
+getData('all');
+input.addEventListener('keypress', (e) => {
+	if (e.key == 'Enter') {
+		e.preventDefault();
+		gallery.innerHTML = '';
+		query = e.target.value
+		getData(query);
+		getImages();
+	}
+})
 search.addEventListener('click', (e) => {
 	e.preventDefault();
 	gallery.innerHTML = '';
